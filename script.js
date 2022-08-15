@@ -8,7 +8,7 @@ const btn = document.querySelector("button");
 
 // event click
 btn.addEventListener("click", () => {
-
+    alert("Cara penyelesaiian ke-2 masih belum akurat coy, jadi cek ulang")
 	// select input
 	const x = document.querySelectorAll("input");
 
@@ -40,16 +40,19 @@ btn.addEventListener("click", () => {
                      (${a}.${f}.${h}) - (${c}.${e}.${g}) 
                      ${ln}
               detA = (${a*e*i}) + (${b*f*g}) + (${c*d*h}) - 
-                      (${b*d*i}) - (${a*f*h}) - (${g*e*g})
+                      (${b*d*i}) - (${a*f*h}) - (${c*e*g})
                       ${ln}
               detA = ${determine()} 
                       ${ln}`;
 
 	// 2nd way
 	document.querySelector("#way2").innerHTML = `
+	
               det A = ${a}((${e}.${i})-(${f}.${h}))  -  ${b}((${d}.${i}) - (${f}.${g}))  +  ${c}((${d}.${h}) - (${e}.${g})) <br><br>
-              det A = ${a}(${e*i} - ${f*h}) + ${Math.abs(b)}(${d*i} - ${f*g}) + ${c}(${d*h} - ${e*g}) <br><br>
-              det A = ${a}(${e*i-f*h}) + ${Math.abs(b)}(${d*i-f*g}) + ${c}(${d*h-e*g}) <br><br>
-              det A = ${a*e*i-f*h} + ${Math.abs(b)*(i*d-g*f)} + ${c*d*h-e*g} <br><br>
+              det A = ${a}(${e*i} - ${f*h}) + ${b >= 0 ? b : Math.abs(b)}(${d*i} - ${f*g}) + ${c}(${d*h} - ${e*g}) <br><br>
+              det A = ${a}(${e*i-f*h}) + ${b >= 0 ? b : Math.abs(b)}(${d*i-f*g}) + ${c}(${d*h-e*g}) <br><br>
+              det A = ${a*(e*i-f*h)} + ${b >= 0 ? b : Math.abs(b)*(i*d-g*f)} + ${c*(d*h-e*g)} <br><br>
               det A = ${determine()}`;
+              
+   document.querySelector("#det").innerHTML = `Jadi hasil dari determinan matriks A adalah  ${determine()}`;
 });
