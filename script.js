@@ -8,7 +8,7 @@ const btn = document.querySelector("button");
 
 // event click
 btn.addEventListener("click", () => {
-    alert("Cara penyelesaiian ke-2 masih belum akurat coy, jadi cek ulang")
+    alert("Cara penyelesaian ke-2 masih belum akurat coy, jadi cek ulang")
 	// select input
 	const x = document.querySelectorAll("input");
 
