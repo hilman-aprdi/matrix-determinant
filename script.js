@@ -8,7 +8,6 @@ const btn = document.querySelector("button");
 
 // event click
 btn.addEventListener("click", () => {
-    alert("Cara penyelesaian ke-2 masih belum akurat coy, jadi cek ulang")
 	// select input
 	const x = document.querySelectorAll("input");
 
@@ -19,8 +18,8 @@ btn.addEventListener("click", () => {
 		e = x[4].value,
 		f = x[5].value,
 		g = x[6].value,
-		h = x[7].value;
-	i = x[8].value;
+		h = x[7].value,
+	        i = x[8].value;
 	// matrixs determine
 	function determine() {
 		const result = [
